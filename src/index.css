@@ -1,1 +1,81 @@
 @import 'tailwindcss';
+
+@theme {
+  --color-cyan-600: hsl(192, 37%, 48%);
+  --color-cyan-300: hsl(192, 90%, 77%);
+  --color-purple-600: hsl(268, 34%, 53%);
+  --color-purple-300: hsl(268, 100%, 86%);
+  --color-slate-900: hsl(240, 21%, 20%);
+  --color-slate-600: hsl(240, 10%, 57%);
+  --color-slate-300: hsl(240, 18%, 85%);
+  --color-snow-white: hsl(0, 0%, 100%);
+  --font-red-hat-display:
+    'Red Hat Display', ui-sans-serif, system-ui, sans-serif;
+  --spacing-50: 4px;
+  --spacing-100: 8px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+  --spacing-700: 56px;
+  --spacing-800: 64px;
+  --spacing-900: 72px;
+  --spacing-1000: 80px;
+  --spacing-1400: 112px;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-snow-white);
+    font-family: var(--font-red-hat-display);
+  }
+}
+
+/*
+font-thin                 font-weight: 100;
+font-extralight           font-weight: 200;
+font-light                font-weight: 300;
+font-normal               font-weight: 400;
+font-medium               font-weight: 500;
+font-semibold             font-weight: 600;
+font-bold                 font-weight: 700;
+font-extrabold            font-weight: 800;
+font-black                font-weight: 900;
+font-(<custom-property>)  font-weight: var(<custom-property>);
+font-[<value>]            font-weight: <value>;
+*/
+
+@utility text-preset-1 {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 110%;
+  letter-spacing: 0px;
+}
+
+@utility text-preset-2 {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 110%;
+  letter-spacing: 4px;
+}
+
+@utility text-preset-3 {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 110%;
+  letter-spacing: 4px;
+}
+
+@utility text-preset-4 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 110%;
+  letter-spacing: 0px;
+}
+
+@utility text-preset-5 {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0px;
+}
