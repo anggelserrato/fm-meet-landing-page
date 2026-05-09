@@ -24,16 +24,16 @@ function MeetLandingPage() {
       </header>
 
       <main className="flex flex-col items-center justify-center text-center">
-        <section className="mx-400 mt-800 mb-400">
-          <picture>
-            <source srcSet={heroDesktopLeft} media="(min-width: 1200px)" />
-            <source srcSet={heroDesktopRight} media="(min-width: 1024px)" />
-            <img
-              src={heroTabletMobile}
-              alt="Illustration showing a diverse group of people connecting through online video meetings"
-              className="mb-[48px] h-[160px]"
-            />
-          </picture>
+        <picture className="mt-800 w-full overflow-hidden">
+          <source srcSet={heroDesktopLeft} media="(min-width: 1200px)" />
+          <source srcSet={heroDesktopRight} media="(min-width: 1024px)" />
+          <img
+            src={heroTabletMobile}
+            alt="Illustration showing a diverse group of people connecting through online video meetings"
+            className="h-[160px] w-full object-cover object-center"
+          />
+        </picture>
+        <section className="mx-400 mt-[48px] mb-400">
           <div className="flex flex-col gap-300">
             <h1 className="text-preset-1">Group Chat for Everyone</h1>
             <p className="text-preset-4">
@@ -43,13 +43,13 @@ function MeetLandingPage() {
             <div className="flex flex-col items-center gap-200">
               <a
                 href="#"
-                className="w-fit rounded-[29px] bg-cyan-600 px-500 py-200 text-preset-5 text-white"
+                className="w-fit rounded-[29px] bg-cyan-600 px-500 py-200 text-preset-5 text-white transition-colors duration-200 hover:bg-[#71C0D4]"
               >
                 Download <span className="text-cyan-300">v1.3</span>
               </a>
               <a
                 href="#"
-                className="w-fit rounded-[29px] bg-purple-600 px-500 py-200 text-preset-5 text-white"
+                className="w-fit rounded-[29px] bg-purple-600 px-500 py-200 text-preset-5 text-white transition-colors duration-200 hover:bg-[#B18BDD]"
               >
                 What is it?
               </a>
@@ -57,13 +57,17 @@ function MeetLandingPage() {
           </div>
         </section>
 
-        <section>
+        <div className="mt-400 flex flex-col items-center">
+          <div className="h-1000 w-px bg-slate-300"></div>
           <p
             aria-hidden="true"
             className="flex h-700 w-700 flex-col justify-center rounded-full border border-slate-300 text-preset-5"
           >
             01
           </p>
+        </div>
+
+        <section className="mx-400 my-800">
           <figure className="grid grid-cols-2 gap-200">
             <img
               src={galleryWoman}
@@ -91,31 +95,41 @@ function MeetLandingPage() {
           </figure>
         </section>
 
-        <section>
-          <h2 className="text-preset-3">Built for modern use</h2>
-          <h3 className="text-preset-2">Smarter meetings, all in one place</h3>
+        <section className="mx-400 mb-800">
+          <h2 className="mb-200 text-preset-3 uppercase">
+            Built for modern use
+          </h2>
+          <h3 className="mb-400 text-preset-2">
+            Smarter meetings, all in one place
+          </h3>
           <p className="text-preset-4">
             Send messages, share files, show your screen, and record your
             meetings — all in one workspace. Control who can join with
             invite-only team access, data encryption, and data export.
           </p>
+        </section>
+
+        <div className="relative z-20 flex translate-y-7 flex-col items-center">
+          <div className="h-1000 w-px bg-slate-300"></div>
           <p
             aria-hidden="true"
-            className="rounded-full border border-slate-300 text-preset-5"
+            className="flex h-700 w-700 flex-col justify-center rounded-full border border-slate-300 bg-white text-preset-5"
           >
             02
           </p>
-        </section>
-        <footer className="bg-purple-600">
-          <picture>
+        </div>
+
+        <footer className="relative overflow-hidden bg-cyan-600/90 text-center">
+          <picture className="absolute inset-0 -z-10">
             <source srcSet={footerDesktop} media="(min-width: 1024px)" />
             <source srcSet={footerTablet} media="(min-width: 768px)" />
             <img
               src={footerMobile}
               alt="A woman smiling and enjoying a group video session, representing human connection"
+              className="h-full w-full object-cover"
             />
           </picture>
-          <section>
+          <section className="relative z-10 mx-400 my-800 flex flex-col gap-300">
             <h2 className="text-preset-2 text-white">
               Experience more together
             </h2>
@@ -123,12 +137,14 @@ function MeetLandingPage() {
               Stay connected with reliable HD meetings and unlimited one-on-one
               and group video sessions.
             </p>
-            <a
-              href="#"
-              className="rounded-[29px] bg-purple-600 text-preset-5 text-white"
-            >
-              Download <span className="text-purple-300">v1.3</span>
-            </a>
+            <div className="flex flex-col items-center">
+              <a
+                href="#"
+                className="w-fit rounded-[29px] bg-purple-600 px-500 py-200 text-preset-5 text-white transition-colors duration-200 hover:bg-[#B18BDD]"
+              >
+                Download <span className="text-purple-300">v1.3</span>
+              </a>
+            </div>
           </section>
         </footer>
       </main>
