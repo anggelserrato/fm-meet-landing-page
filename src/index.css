@@ -45,6 +45,9 @@
   letter-spacing: 0px;
   color: var(--color-slate-900);
   @variant md {
+    font-size: 48px;
+  }
+  @variant lg {
     font-size: 64px;
   }
 }

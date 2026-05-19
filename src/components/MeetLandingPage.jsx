@@ -12,7 +12,7 @@ import footerMobile from '../assets/mobile/image-footer.jpg';
 
 function MeetLandingPage() {
   return (
-    <div>
+    <div className="">
       <header>
         <a href="#">
           <img
@@ -30,17 +30,17 @@ function MeetLandingPage() {
           <img
             src={heroTabletMobile}
             alt="Illustration showing a diverse group of people connecting through online video meetings"
-            className="h-[160px] w-full object-cover object-center"
+            className="h-auto w-full object-cover object-center"
           />
         </picture>
-        <section className="mx-400 mt-[48px] mb-400">
+        <section className="mx-400 mt-[48px] mb-400 md:mt-900 md:mb-800">
           <div className="flex flex-col gap-300">
             <h1 className="text-preset-1">Group Chat for Everyone</h1>
             <p className="text-preset-4">
               Meet makes it easy to connect with others face-to-face virtually
               and collaborate across any device.
             </p>
-            <div className="flex flex-col items-center gap-200">
+            <div className="flex flex-col gap-200 md:flex-row md:justify-center">
               <a
                 href="#"
                 className="w-fit rounded-[29px] bg-cyan-600 px-500 py-200 text-preset-5 text-white transition-colors duration-200 hover:bg-[#71C0D4]"
@@ -68,7 +68,7 @@ function MeetLandingPage() {
         </div>
 
         <section className="mx-400 my-800">
-          <figure className="grid grid-cols-2 gap-200">
+          <figure className="grid grid-cols-2 gap-200 md:grid-cols-4 md:gap-300">
             <img
               src={galleryWoman}
               className="rounded-lg"
