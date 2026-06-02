@@ -59,7 +59,7 @@
   letter-spacing: 0px;
   color: var(--color-slate-900);
   @variant md {
-    font-size: 40px;
+    font-size: 36px;
   }
 }
 
@@ -70,7 +70,7 @@
   letter-spacing: 4px;
   color: var(--color-cyan-600);
   @variant md {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -81,7 +81,6 @@
   letter-spacing: 0px;
   color: var(--color-slate-600);
   @variant md {
-    font-size: 18px;
     line-height: 1.1;
   }
 }

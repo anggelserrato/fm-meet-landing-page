@@ -12,7 +12,7 @@ import footerMobile from '../assets/mobile/image-footer.jpg';
 
 function MeetLandingPage() {
   return (
-    <div className="">
+    <div>
       <header>
         <a href="#">
           <img
@@ -24,16 +24,16 @@ function MeetLandingPage() {
       </header>
 
       <main className="flex flex-col items-center justify-center text-center">
-        <picture className="mt-800 w-full overflow-hidden">
-          <source srcSet={heroDesktopLeft} media="(min-width: 1200px)" />
+        <picture className="mt-800 w-full overflow-hidden md:max-w-[768px]">
+          <source srcSet={heroDesktopLeft} media="(min-width: 1024px)" />
           <source srcSet={heroDesktopRight} media="(min-width: 1024px)" />
           <img
             src={heroTabletMobile}
             alt="Illustration showing a diverse group of people connecting through online video meetings"
-            className="h-auto w-full object-cover object-center"
+            className="h-auto w-full object-cover"
           />
         </picture>
-        <section className="mx-400 mt-12 mb-400 md:mt-900 md:mb-800">
+        <section className="mx-400 mt-12 mb-400 max-w-[448px] md:mt-900 md:mb-800">
           <div className="flex flex-col gap-300">
             <h1 className="text-preset-1">Group Chat for Everyone</h1>
             <p className="text-preset-4">
@@ -95,11 +95,11 @@ function MeetLandingPage() {
           </figure>
         </section>
 
-        <section className="mx-400 mb-800">
+        <section className="mx-400 mb-800 flex max-w-[504px] flex-col items-center">
           <h2 className="mb-200 text-preset-3 uppercase">
             Built for modern use
           </h2>
-          <h3 className="mb-400 text-preset-2">
+          <h3 className="mb-400 max-w-[445px] text-preset-2">
             Smarter meetings, all in one place
           </h3>
           <p className="text-preset-4">
@@ -119,8 +119,8 @@ function MeetLandingPage() {
           </p>
         </div>
 
-        <footer className="relative overflow-hidden bg-cyan-600/90 text-center">
-          <picture className="absolute inset-0 -z-10">
+        <footer className="relative flex w-full flex-col items-center overflow-hidden bg-cyan-600/90 text-center">
+          <picture className="absolute inset-0 -z-10 w-full">
             <source srcSet={footerDesktop} media="(min-width: 1024px)" />
             <source srcSet={footerTablet} media="(min-width: 768px)" />
             <img
@@ -129,7 +129,7 @@ function MeetLandingPage() {
               className="h-full w-full object-cover"
             />
           </picture>
-          <section className="relative z-10 mx-400 my-800 flex flex-col gap-300">
+          <section className="relative z-10 mx-400 my-800 flex max-w-[504px] flex-col gap-300">
             <h2 className="text-preset-2 text-white">
               Experience more together
             </h2>
