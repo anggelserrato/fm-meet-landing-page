@@ -24,6 +24,8 @@ Users should be able to:
 
 ### Screenshot
 
+<img width="1920" height="1440" alt="shots" src="https://github.com/user-attachments/assets/92d1c6e7-8043-4fb5-9f1f-c528dada96fb" />
+
 ### Links
 
 - Solution URL: [View Code](https://github.com/anggelserrato/fm-meet-landing-page)
