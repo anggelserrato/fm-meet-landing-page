@@ -24,40 +24,63 @@ function MeetLandingPage() {
       </header>
 
       <main className="flex flex-col items-center justify-center text-center">
-        <picture className="mt-800 w-full overflow-hidden md:max-w-[768px]">
-          <source srcSet={heroDesktopLeft} media="(min-width: 1024px)" />
-          <source srcSet={heroDesktopRight} media="(min-width: 1024px)" />
-          <img
-            src={heroTabletMobile}
-            alt="Illustration showing a diverse group of people connecting through online video meetings"
-            className="h-auto w-full object-cover"
-          />
-        </picture>
-        <section className="mx-400 mt-12 mb-400 max-w-[448px] md:mt-900 md:mb-800">
-          <div className="flex flex-col gap-300">
-            <h1 className="text-preset-1">Group Chat for Everyone</h1>
-            <p className="text-preset-4">
-              Meet makes it easy to connect with others face-to-face virtually
-              and collaborate across any device.
-            </p>
-            <div className="flex flex-col items-center gap-200 md:flex-row md:justify-center">
-              <a
-                href="#"
-                className="w-fit rounded-[29px] bg-cyan-600 px-500 py-200 text-preset-5 text-white transition-colors duration-200 hover:bg-[#71C0D4]"
-              >
-                Download <span className="text-cyan-300">v1.3</span>
-              </a>
-              <a
-                href="#"
-                className="w-fit rounded-[29px] bg-purple-600 px-500 py-200 text-preset-5 text-white transition-colors duration-200 hover:bg-[#B18BDD]"
-              >
-                What is it?
-              </a>
-            </div>
-          </div>
-        </section>
+        {/* 1 */}
+        <div className="flex flex-col items-center justify-center text-center xl:grid xl:grid-cols-[1fr,auto,1fr] xl:grid-rows-1">
+          <div className="mt-800 mb-400 grid w-full grid-cols-1 items-center justify-items-center gap-6 md:mt-900 md:mb-800 xl:grid-cols-[1fr_auto_1fr] xl:items-center xl:gap-8">
+            <picture className="hidden w-full xl:block">
+              <source srcSet={heroDesktopLeft} media="(min-width:1280px)" />
+              <img
+                src={heroDesktopLeft}
+                alt="Decorative left"
+                className="h-auto w-full object-cover"
+              />
+            </picture>
 
-        <div className="mt-400 flex flex-col items-center">
+            <div className="flex w-full flex-col items-center text-center">
+              <picture className="block w-full md:max-w-[768px] xl:hidden">
+                <img
+                  src={heroTabletMobile}
+                  alt="Illustration showing a diverse group of people connecting through online video meetings"
+                  className="h-auto w-full object-cover"
+                />
+              </picture>
+
+              <div className="mx-400 mt-12 flex max-w-[448px] flex-col gap-300">
+                <h1 className="text-preset-1">Group Chat for Everyone</h1>
+                <p className="text-preset-4">
+                  Meet makes it easy to connect with others face-to-face
+                  virtually and collaborate across any device.
+                </p>
+                <div className="flex flex-col items-center gap-200 md:flex-row md:justify-center">
+                  <a
+                    href="#"
+                    className="w-fit rounded-[29px] bg-cyan-600 px-500 py-200 text-preset-5 text-white transition-colors duration-200 hover:bg-[#71C0D4]"
+                  >
+                    Download <span className="text-cyan-300">v1.3</span>
+                  </a>
+                  <a
+                    href="#"
+                    className="w-fit rounded-[29px] bg-purple-600 px-500 py-200 text-preset-5 text-white transition-colors duration-200 hover:bg-[#B18BDD]"
+                  >
+                    What is it?
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <picture className="hidden w-full xl:block">
+              <source srcSet={heroDesktopRight} media="(min-width:1280px)" />
+              <img
+                src={heroDesktopRight}
+                alt="Decorative right"
+                className="h-auto w-full object-cover"
+              />
+            </picture>
+          </div>
+        </div>
+
+        {/* Number 1 */}
+        <div className="mt-400 flex flex-col items-center md:mt-700 lg:mt-700">
           <div className="h-1000 w-px bg-slate-300"></div>
           <p
             aria-hidden="true"
@@ -67,7 +90,8 @@ function MeetLandingPage() {
           </p>
         </div>
 
-        <section className="mx-400 my-800">
+        {/* 3 */}
+        <section className="mx-400 mt-800 lg:max-w-[1120px]">
           <figure className="grid grid-cols-2 gap-200 md:grid-cols-4 md:gap-300">
             <img
               src={galleryWoman}
@@ -95,7 +119,8 @@ function MeetLandingPage() {
           </figure>
         </section>
 
-        <section className="mx-400 mb-800 flex max-w-[504px] flex-col items-center">
+        {/* 4 */}
+        <section className="mx-400 mt-800 mb-400 flex max-w-[504px] flex-col items-center lg:mt-800">
           <h2 className="mb-200 text-preset-3 uppercase">
             Built for modern use
           </h2>
@@ -109,7 +134,8 @@ function MeetLandingPage() {
           </p>
         </section>
 
-        <div className="relative z-20 flex translate-y-7 flex-col items-center">
+        {/* Number 2 */}
+        <div className="relative z-20 flex translate-y-7 flex-col items-center md:mt-400 lg:mt-0">
           <div className="h-1000 w-px bg-slate-300"></div>
           <p
             aria-hidden="true"
@@ -119,17 +145,18 @@ function MeetLandingPage() {
           </p>
         </div>
 
-        <footer className="relative flex w-full flex-col items-center overflow-hidden bg-cyan-600/90 text-center">
+        {/* 6 */}
+        <footer className="relative flex w-full flex-col items-center overflow-hidden bg-cyan-600/90 text-center lg:flex-row lg:items-center lg:justify-between lg:gap-8">
           <picture className="absolute inset-0 -z-10 w-full">
             <source srcSet={footerDesktop} media="(min-width: 1024px)" />
             <source srcSet={footerTablet} media="(min-width: 768px)" />
             <img
               src={footerMobile}
               alt="A woman smiling and enjoying a group video session, representing human connection"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover lg:flex-1"
             />
           </picture>
-          <section className="relative z-10 mx-400 my-800 flex max-w-[504px] flex-col gap-300">
+          <section className="relative z-10 mx-400 my-800 flex max-w-[504px] flex-col gap-300 lg:max-w-none lg:flex-row lg:items-center lg:gap-8">
             <h2 className="text-preset-2 text-white">
               Experience more together
             </h2>
